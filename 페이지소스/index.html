@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>민원서비스 목록 검색</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>민원서비스 목록 검색</h1>
+            <p class="subtitle">필요한 민원서비스를 빠르게 검색하고 필터링해 보세요.</p>
+        </header>
+
+        <!-- 필터 및 검색 영역 -->
+        <section class="filter-section">
+            <div class="search-box">
+                <label for="searchInput">서비스명 검색</label>
+                <input type="text" id="searchInput" placeholder="서비스명을 입력하세요 (예: 발급, 신고)">
+            </div>
+            
+            <div class="category-box">
+                <label for="categorySelect">민원분야</label>
+                <select id="categorySelect">
+                    <option value="전체">전체 분야</option>
+                    <!-- JavaScript에서 분야 목록을 동적으로 추가함 -->
+                </select>
+            </div>
+        </section>
+
+        <!-- 결과 개수 표시 및 결과 리스트 -->
+        <main>
+            <div class="result-count">
+                총 <span id="count">0</span>건의 민원서비스가 검색되었습니다.
+            </div>
+
+            <div class="grid-container" id="serviceList">
+                <!-- 민원서비스 카드가 JavaScript에 의해 출력됨 -->
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
